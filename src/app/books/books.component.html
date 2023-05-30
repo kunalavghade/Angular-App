@@ -1,10 +1,17 @@
-<p>books works!</p>
+<p>books List</p>
+
+<!-- property binding [attr] = name_of_var | it depends on datatype-->
+<!-- user for buttons -->
+<button [disabled]="isDisable">Show books</button>
+
 <ul>
     <li>
+        <!-- property binding [attr] = name_of_var -->
         <img src="{{img1}}" alt="{{name1}}" width="100">
         {{ name1 }} by {{ author1 }}
     </li>
     <li>
+        <!-- interpolation user {{}} treates as string -->
         <img src="{{img1}}" alt="{{name1}}" width="100">
         {{ name1 }} by {{ author1 }}
     </li>
