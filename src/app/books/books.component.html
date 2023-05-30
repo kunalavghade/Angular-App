@@ -3,7 +3,10 @@
 <!-- property binding [attr] = name_of_var | it depends on datatype-->
 <!-- user for buttons -->
 <!-- <button (click)="toggleBooks()">Toggle books</button> -->
-<button (click)="isShowing = !isShowing">Toggle books</button>
+<button (click)="isShowing = !isShowing">
+    <ng-container *ngIf="isShowing">Hide Books</ng-container>
+    <ng-container *ngIf="!isShowing">Show Books</ng-container>
+</button>
 <!-- Event Handler -->
 <!-- <Tag (action)="finctionCall()" > -->
 
