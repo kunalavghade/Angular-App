@@ -3,6 +3,14 @@
 <!-- property binding [attr] = name_of_var | it depends on datatype-->
 <!-- user for buttons -->
 <button (click)="handleClick()" [disabled]="isDisable">Show books</button>
+<!-- Event Handler -->
+<!-- <Tag (action)="finctionCall()" > -->
+
+<!-- Two way binding  -->
+<!-- <input type="text" (input)="handleInput($event)" /> -->
+<input type="text" [(ngModel)]="inputStr" />
+
+<p>{{inputStr}}</p>
 
 <ul>
     <li>

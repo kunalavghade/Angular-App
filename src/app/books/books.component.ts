@@ -22,6 +22,13 @@ export class BooksComponent implements OnInit{
 
   handleClick(){
     this.isDisable = true;
-    alert('working on click')
+    alert('working on click');
   }
+
+  inputStr: string = '';
+  
+  // handleInput(event: any){
+  //   this.inputStr = event.target.value;
+  // }
+
 }
