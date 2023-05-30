@@ -2,7 +2,7 @@
 
 <!-- property binding [attr] = name_of_var | it depends on datatype-->
 <!-- user for buttons -->
-<button [disabled]="isDisable">Show books</button>
+<button (click)="handleClick()" [disabled]="isDisable">Show books</button>
 
 <ul>
     <li>
