@@ -18,17 +18,12 @@ export class BooksComponent implements OnInit{
     throw new Error('Method not implemented.');
   }
 
-  isDisable : boolean = false;
-
-  handleClick(){
-    this.isDisable = true;
-    alert('working on click');
-  }
-
   inputStr: string = '';
-  
-  // handleInput(event: any){
-  //   this.inputStr = event.target.value;
+
+  isShowing: boolean = true;
+
+  // toggleBooks(){
+  //   this.isShowing = !this.isShowing;
   // }
 
 }
