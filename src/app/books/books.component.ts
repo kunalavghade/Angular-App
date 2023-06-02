@@ -40,4 +40,8 @@ export class BooksComponent implements OnInit{
 
   isShowing: boolean = true;
 
+  addToCart(book :any) {
+    alert(book);
+  }
+
 }

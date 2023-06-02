@@ -9,10 +9,10 @@ import { Book } from '../types/Books';
 export class BookComponent {
   @Input() book: Book = {} as Book;
 
-  @Output() emiter = new EventEmitter<Book>();
+  @Output() bookEmiter = new EventEmitter<Book>();
 
   addToCart(){
-    this.emiter.emit(this.book);
+    this.bookEmiter.emit(this.book);
   }
 
 }
