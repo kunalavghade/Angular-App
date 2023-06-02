@@ -12,9 +12,10 @@
 <ul *ngIf="isShowing" >
     <ng-container *ngFor="let book of books; let i = index">
         <li >
-            {{i+1}}
+            <p class="sno">{{i+1}}</p>
             <img src="{{book.src}}" alt="{{book.name}}" width="100">
-            {{ book.name | titlecase }} by {{ book.author | titlecase}}
+            <p class="title">{{ book.name | titlecase }} by {{ book.author | titlecase}}</p>
+            <p class="currency">{{ book.ammount | currency:'INR' }}</p>
         </li>
     </ng-container>
 </ul>
