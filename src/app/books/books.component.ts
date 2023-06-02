@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../types/Books';
-
+import { BooksService } from './books.service';
 
 @Component({
   selector: 'app-books',
@@ -9,37 +9,16 @@ import { Book } from '../types/Books';
 })
 export class BooksComponent implements OnInit{
   
-  books: Book[] = [
-    {
-      name: 'Clean Code',
-      author: 'Robert Cecil Martin',
-      src: "https://m.media-amazon.com/images/I/41zoxjP9lcL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg",
-      ammount: 700,
-    },
-    {
-      name: 'Clean Code',
-      author: 'Robert Cecil Martin',
-      src: "https://m.media-amazon.com/images/I/41zoxjP9lcL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg",
-      ammount: 700,
-    },
-    {
-      name: 'Clean Code',
-      author: 'Robert Cecil Martin',
-      src: "https://m.media-amazon.com/images/I/41zoxjP9lcL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg",
-      ammount: 700,
-    }
-  ];
   
-  BooksComponent() {}
-
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
   inputStr: string = '';
-
-  isShowing: boolean = true;
-
+  isShowing: boolean = true;  
+  books: Book[] = [];
+  
+  constructor(private booksService: BooksService) {
+    this.books = this.booksService.getBooks();
+  } 
+  
+  ngOnInit(): void {}
   addToCart(book :any) {
     alert(book);
   }
