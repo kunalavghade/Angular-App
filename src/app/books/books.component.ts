@@ -9,7 +9,6 @@ import { BooksService } from './books.service';
 })
 export class BooksComponent implements OnInit{
   
-  
   inputStr: string = '';
   isShowing: boolean = true;  
   books: Book[] = [];
@@ -19,6 +18,7 @@ export class BooksComponent implements OnInit{
   } 
   
   ngOnInit(): void {}
+
   addToCart(book :any) {
     alert(book);
   }
