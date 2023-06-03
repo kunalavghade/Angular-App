@@ -1,8 +1,7 @@
-<li >
-    <!-- <p class="sno">{{i+1}}</p> -->
-    <img src="{{book.src}}" alt="{{book.name}}" width="100">
-    <p class="title">{{ book.name | titlecase }} by {{ book.author | titlecase}}</p>
-    <p class="currency">{{ book.ammount | currency:'INR' }}</p>
-    <button *ngIf="!isAdded" (click)="addToCart()">Add to Cart</button>
-    <button *ngIf="isAdded" (click)="removeFromCart()">Remove from Cart</button>
+<li class="justify-center items-center text-center m-10 border-2 border-black p-2 rounded-lg ">
+    <img class="mx-auto" src="{{book.src}}" alt="{{book.name}}" width="100">
+    <p class="text-center font-bold p-2">{{ book.name | titlecase }} by {{ book.author | titlecase}}</p>
+    <p class="text-center font-bold p-2">{{ book.ammount | currency:'INR' }}</p>
+    <button *ngIf="!isAdded" class="bg-purple-800 p-2 font-bold rounded-lg" (click)="addToCart()">Add to Cart</button>
+    <button *ngIf="isAdded" class="bg-red-500 p-2 font-bold rounded-lg" (click)="removeFromCart()">Remove from Cart</button>
 </li>

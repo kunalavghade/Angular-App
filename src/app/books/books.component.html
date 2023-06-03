@@ -1,15 +1,16 @@
-<h1>books List</h1>
+<h1 class="text-lg text-center font-bold p-4" >books List</h1>
 
+<div class="flex justify-center ">
+    
+    <button class="text-lg font-bold p-4 bg-yellow-700 text-black rounded-sm" (click)="isShowing = !isShowing">
+        <ng-container *ngIf="isShowing">Hide Books</ng-container>
+        <ng-container *ngIf="!isShowing">Show Books</ng-container>
+    </button>
+    <input class="text-lg  font-bold p-4 border-2 border-black rounded-sm" type="text" [(ngModel)]="inputStr" />
+</div>
+    <p class="text-lg text-center font-bold p-4" >{{inputStr}}</p>
 
-<button (click)="isShowing = !isShowing">
-    <ng-container *ngIf="isShowing">Hide Books</ng-container>
-    <ng-container *ngIf="!isShowing">Show Books</ng-container>
-</button>
-<input type="text" [(ngModel)]="inputStr" />
-
-<p>{{inputStr}}</p>
-
-<ul *ngIf="isShowing" >
+<ul *ngIf="isShowing"  class="flex flex-wrap justify-center">
     <ng-container *ngFor="let book of books; let i = index">
         <app-book  [book]="book" ></app-book>
     </ng-container>
