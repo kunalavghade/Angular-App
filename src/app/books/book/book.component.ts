@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 import { Book } from '../../types/Books';
 
 @Component({
@@ -8,11 +9,19 @@ import { Book } from '../../types/Books';
 })
 export class BookComponent {
   @Input() book: Book = {} as Book;
+  
+  constructor(private cart : CartService) {}
 
-  @Output() bookEmiter = new EventEmitter<Book>();
+  isAdded : boolean = false;
 
   addToCart(){
-    this.bookEmiter.emit(this.book);
+    this.isAdded = true;
+    this.cart.add(this.book);
+  }
+
+  removeFromCart() {
+    this.isAdded = false;
+    this.cart.remove(this.book);
   }
 
 }

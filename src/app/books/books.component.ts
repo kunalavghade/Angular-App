@@ -19,8 +19,4 @@ export class BooksComponent implements OnInit{
   
   ngOnInit(): void {}
 
-  addToCart(book :any) {
-    alert(book);
-  }
-
 }
