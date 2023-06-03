@@ -3,16 +3,19 @@
         <h1 class="text-xl text-center font-semibold">Register</h1>
         <div class="m-5 w-full">
             <label for="emai">Email</label>
-            <input type="email" class="p-2 rounded w-full border" placeholder="Email Address">
+            <input type="email" class="p-2 rounded w-full border" placeholder="Email Address"[(ngModel)]="form.email" name="email" >
         </div>
+        <!-- {{ form.email }} -->
         <div class="m-5 w-full">
             <label for="password">Password</label>
-            <input type="password" class="p-2 rounded w-full border" placeholder="Password">
+            <input type="password" class="p-2 rounded w-full border" placeholder="Password"  [(ngModel)]="form.password" name="password">
         </div >
+        <!-- {{ form.password }} -->
         <div class="m-5 w-full">
             <label for="password">Password</label>
-            <input type="password" class="p-2 rounded w-full border" placeholder="Confirm Password">
+            <input type="password" class="p-2 rounded w-full border" placeholder="Confirm Password" [(ngModel)]="form.password2" name="password2">
         </div >
+        <!-- {{ form.password2 }} -->
         <div class="m-5 w-full">
             <button type="submit" class="p-2 w-full bg-purple-700 text-white hover:bg-purple-900 rounded"> Submit</button>
         </div>
