@@ -15,7 +15,11 @@ export class RegisterComponent {
   }
   password_matched : boolean =  true;
 
+  isLoading : boolean = false;
+
   submit(){
+    if(this.isLoading ==  true) return;
+    this.isLoading = true;
     if(this.form.password !=this.form.password) {
       this.password_matched = false;
       return
@@ -33,6 +37,6 @@ export class RegisterComponent {
         const errorMessage = error.message;
         // ..
         console.log(errorMessage);
-      });
+      }).finally(()=> (this.isLoading = false));
   }
 }
