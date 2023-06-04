@@ -12,4 +12,8 @@ export class RegisterComponent {
     password : '',
     password2 : ''
   }
+
+  submit(){
+    
+  }
 }

@@ -11,4 +11,7 @@ export class LoginComponent {
     email: '',
     password : ''
   }
+  submit(){
+    alert('asdina')
+  }
 }
